@@ -5,8 +5,7 @@
   "scripts": {
     "start": "npx eleventy --serve",
     "build": "npx eleventy",
-    "clean": "rm -rf dist",
-    "prod": "npm run clean && ELEVENTY_ENV=production eleventy"
+    "clean": "rm -rf dist"
   },
   "keywords": [],
   "author": "",

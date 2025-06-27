@@ -13,7 +13,7 @@ module.exports = (config) => {
 
 	config.addPlugin(eleventyImageTransformPlugin, {
 		// output image formats
-		formats: ["avif", "jpeg"],
+		formats: ["webp", "jpeg"],
         
         // Output directory
         outputDir: './dist/images',
