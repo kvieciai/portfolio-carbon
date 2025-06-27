@@ -1,0 +1,21 @@
+<div class="process__container">
+    <div class="process__body">
+		<h3>Process</h3>
+		<p>Snapshots from the creative journey.</p>
+	</div>
+	<ul class="process__grid">
+		{% for item in process.items | reverse %}
+             <li>
+				<figure class="process__item">
+                	<img src="{{ item.image }}" alt="{{ item.imageAlt }}" loading="lazy"/>
+					<figcaption>
+						<ul>
+							<li>{{ item.caption }}</li>
+							<li>{{ item.date }}</li>
+						</ul>
+					</figcaption>
+				</figure>
+            </li>
+		{% endfor %}
+	</ul>
+ </div>

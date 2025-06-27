@@ -1,0 +1,27 @@
+{
+  "name": "Aleksandr Anciutin",
+  "url": "https://anciutin.com",
+
+  "author": {
+    "name": "Aleksandr Anciutin",
+    "email": "anciutin@gmail.com",
+    "location": "Gothenburg, Sweden"
+  },
+
+  "social": [
+    {
+      "name": "Instagram",
+      "url": "https://instagram.com/aleksandranciutin"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://linkedin.com/in/anciutin"
+    },
+    {
+      "name": "Bluesky",
+      "url": "https://bsky.app/profile/anciutin.bsky.social"
+    }
+  ],
+
+  "copyright": "2024-2025"
+}

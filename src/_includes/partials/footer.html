@@ -1,0 +1,29 @@
+<footer class="footer footer__region">
+    <div class="wrapper">
+        <div class="footer__information">
+            <div>
+                <h3>Contact</h3>
+                <p><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></p>
+            </div>
+            <div>
+                <h3>Social</h3>
+                <ul>
+                    {% for social in site.social %}
+                        <li><a href="{{ social.url }}" target="_blank" rel="noopener noreferrer">{{ social.name }}</a></li>
+                    {% endfor %}
+            </ul>
+            </div>
+            <div>
+                <h3>Location</h3>
+                <p>{{ site.author.location }}</p>
+            </div>
+            <div>
+                <h3>Copyright</h3>
+                <p>© {{ site.copyright }}</p>
+            </div>
+        </div>
+        <div class="footer_note">
+            <p>Thanks for visiting my little corner of the internet.</p>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,123 @@
+/* Misc */
+
+.work__details p,
+.work__details ul {
+margin: 0;
+}
+
+.work__heading {
+  color: var(--color-text);
+  margin-block-end: 16px; /* change units to variable later */
+}
+
+@media (min-width: 1600px) {
+  .work__impact p {
+    max-width: 50%;
+  }
+}
+
+
+/* Two equal parts */
+
+.work__body {
+  display: grid;
+  gap: 1rem;
+  align-items: start;
+  margin-block-end: 6rem;
+}
+
+@media (min-width: 768px) {
+  .work__body {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Defining a grid for details */
+
+.work__details {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 1040px) {
+  .work__details {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+  }
+  
+  .work__details > *:nth-child(1) {
+    grid-column: span 3;
+  }
+  
+  .work__details > *:nth-child(2),
+  .work__details > *:nth-child(3),
+  .work__details > *:nth-child(4) {
+    grid-column: span 1;
+  }
+}
+
+@media (min-width: 1600px) {
+  .work__details {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  
+  .work__details > *:nth-child(1) {
+    grid-column: span 3;
+  }
+  
+  .work__details > *:nth-child(2),
+  .work__details > *:nth-child(3),
+  .work__details > *:nth-child(4) {
+    grid-column: span 1;
+  }
+}
+
+/* Defining overflowed, scrollable grid */
+
+.work__grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  gap: 1.5rem;
+
+  padding-inline: 0 2rem;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 1px;
+}
+
+.work__grid li {
+  scroll-snap-align: start;
+
+}
+
+.work__grid img {
+  height: 50rem;
+}
+
+@media (min-width: 768px) {
+  .work__grid img {
+    height: 75rem;
+  }
+}
+
+
+.work__note {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 800px) {
+    .work__note {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1600px) {
+    .work__note {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.work__note p{
+  margin: 0;
+}

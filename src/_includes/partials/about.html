@@ -1,0 +1,38 @@
+<article class="about">
+    <div class="wrapper">
+        <div class="story">
+            {% for item in about.story %}
+                <div>
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.content }}</p>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="experience">
+            <div class="experience__column">
+                 <h3>{{ about.tableTitle }}</h3>
+                <table class="experience__table">
+                    <thead class="visually-hidden">
+                        <tr>
+                            <th scope="col">Company</th>
+                            <th scope="col">Role</th>
+                            <th scope="col">Period</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in about.experience %}
+                            <tr class="experience-row">
+                                <td>{{ item.company }}</td>
+                                <td>{{ item.role }}</td>
+                                <td>{{ item.period }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="experience__column">
+                <img src="{{ about.image }}" alt="{{ about.imageAlt }}" loading="lazy">
+            </div>
+        </div>
+    </div>
+</article>

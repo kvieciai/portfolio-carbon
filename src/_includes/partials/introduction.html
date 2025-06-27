@@ -1,0 +1,14 @@
+<article class="introduction">
+    <div class="wrapper">
+        <h1>{{ introduction.title }}</h1>
+        <img src="{{ introduction.image }}" alt="{{ introduction.imageAlt }}"/>
+        <div class="introduction__grid" data-layout="thirds">
+            <p class="introduction__tagline">{{ introduction.tagline }}</p>
+            <ul class="introduction__capabilities">
+                {% for item in capabilities %}
+                    <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</article>

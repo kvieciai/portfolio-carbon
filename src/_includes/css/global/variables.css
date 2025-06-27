@@ -1,0 +1,33 @@
+:root {
+
+/* Global */
+--color-neutral-900: #262626;
+--color-neutral-400: #767676;
+--color-neutral-200: #B9B9B9;
+--color-white: #ffffff;
+
+/* Color */
+--color-bg: var(--color-white);
+--color-text: var(--color-neutral-900);
+--color-text-subdued: var(--color-neutral-200);
+--color-border: var(--color-neutral-200);
+
+/* Font */
+--font-family: Inter, system-ui, sans-serif;
+--font-letter-spacing-normal: -0.03ch;
+--font-letter-spacing-tight: -0.08ch;
+--font-weight-regular: 400;
+--font-weight-medium: 500;
+--font-size-200: 1rem;
+--font-size-700: clamp(2rem, -0.3333rem + 2.6667vw, 3rem);
+--font-size-800: clamp(2.375rem, 0.9273rem + 4.7273vw, 4rem);
+
+--border-radius: 1rem;
+
+/* Spacing */
+--wrapper-max-width: 2560px;
+--gutter: clamp(1rem, -0.4118rem + 2.9412vw, 1.5rem);
+--flow-space: 1rem;
+--region-space: clamp(18.75rem, 1.1029rem + 36.7647vw, 25rem);
+
+}

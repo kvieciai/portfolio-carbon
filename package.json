@@ -1,0 +1,20 @@
+{
+  "name": "portfolio-carbon",
+  "version": "1.0.0",
+  "main": ".eleventy.js",
+  "scripts": {
+    "start": "npx eleventy --serve",
+    "build": "npx eleventy",
+    "clean": "rm -rf dist",
+    "prod": "npm run clean && ELEVENTY_ENV=production eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.1",
+    "@11ty/eleventy-img": "^6.0.4",
+    "clean-css": "^5.3.3"
+  }
+}

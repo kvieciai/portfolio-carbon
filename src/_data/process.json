@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "caption": "Visit to a local machine shop in Fagersta, Sweden",
+      "date": "September 2021",
+      "image": "/images/process/process-1.png",
+      "imageAlt": "Group of people observing a machine operator changing tools on a CNC milling machine."
+    },
+    {
+      "caption": "Research on CAD model representation",
+      "date": "October 2021",
+      "image": "/images/process/process-2.png",
+      "imageAlt": "Rendered wireframe CAD model of a mechanical part with detailed orange mesh lines and curves."
+    },
+    {
+      "caption": "Workshop for evaluating concepts",
+      "date": "October 2021",
+      "image": "/images/process/process-3.png",
+      "imageAlt": "Wall filled with printed design mockups, handwritten notes, and sticky notes."
+    },
+    {
+      "caption": "Documentation of roles and permissions",
+      "date": "February 2022",
+      "image": "/images/process/process-4.png",
+      "imageAlt": "Screenshot of a roles and permissions table showing different access levels for users and systems."
+    },
+    {
+      "caption": "Specifications for card component",
+      "date": "March 2023",
+      "image": "/images/process/process-5.png",
+      "imageAlt": "Annotated UI mockup of a car card component, detailing labels like cost, trim, and delivery."
+    },
+    {
+      "caption": "Prototype of a second screen experience",
+      "date": "March 2023",
+      "image": "/images/process/process-6.png",
+      "imageAlt": "Hand holding a smartphone showing a Volvo Sales app, mirrored on a large screen via AirPlay."
+    },
+    {
+      "caption": "Assets for a design system deck",
+      "date": "July 2023",
+      "image": "/images/process/process-7.png",
+      "imageAlt": "Illustration of overlapping design system tokens, labeled with spacing and scale values in colorful tags."
+    },
+    {
+      "caption": "Workshop for mapping user flows",
+      "date": "August 2024",
+      "image": "/images/process/process-8.png",
+      "imageAlt": "A man writes on a whiteboard during a co-creation workshop, surrounded by sticky notes and sketches."
+    }
+  ]
+}
