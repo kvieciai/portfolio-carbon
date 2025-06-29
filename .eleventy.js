@@ -14,7 +14,7 @@ module.exports = (config) => {
 
 	config.addPlugin(eleventyImageTransformPlugin, {
 		// output image formats
-		formats: ["avif", "jpeg"],
+		formats: ["webp", "jpeg"],
         
         // Output directory
         outputDir: './dist/images',
@@ -31,15 +31,9 @@ module.exports = (config) => {
 			},
 			pictureAttributes: {}   
 		},
-
-		sharpAvifOptions: {
-			effort: 4, // 0 (fastest) to 9 (slowest, best compression)
-			quality: 50, // reasonable balance of quality/size
-			tile: true, // ✅ Enables AVIF tiling
-			tileCols: 2, // Optional: number of tile columns
-			tileRows: 2  // Optional: number of tile rows
-		}
 	});
+
+	
 	
 	// Returns work items, sorted by display order
 	config.addCollection('work', (collection) => {
