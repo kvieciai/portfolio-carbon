@@ -78,27 +78,20 @@ margin: 0;
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: max-content;
-  gap: 1.5rem;
+  gap: 1rem;
+
+  align-items: stretch;
 
   padding-inline: 0 2rem;
-  scroll-snap-type: x mandatory;
   scroll-padding-left: 1px;
 }
 
-.work__grid li {
-  scroll-snap-align: start;
-
-}
-
 .work__grid img {
-  height: 50rem;
+  height: clamp(37.5rem, 28.125rem + 46.875vw, 75rem); /* height of the scrollable grid */
+  width: auto;
+  object-fit: contain;
 }
 
-@media (min-width: 768px) {
-  .work__grid img {
-    height: 75rem;
-  }
-}
 
 
 .work__note {

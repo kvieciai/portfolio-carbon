@@ -18,7 +18,6 @@
 {% include "css/utilities/visually-hidden.css" %}
 
 {# Component and patters #}
-{% include "css/blocks/prose.css" %}
 {% include "css/blocks/introduction.css" %}
 {% include "css/blocks/work.css" %}
 {% include "css/blocks/feed.css" %}
