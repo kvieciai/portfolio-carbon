@@ -14,8 +14,8 @@
 
 /* Font */
 --font-family: Inter, system-ui, sans-serif;
---font-letter-spacing-normal: -0.03ch;
---font-letter-spacing-tight: -0.08ch;
+--font-letter-spacing-normal: -0.01ch;
+--font-letter-spacing-tight: -0.07ch;
 --font-weight-regular: 400;
 --font-weight-medium: 500;
 --font-size-200: 1rem;

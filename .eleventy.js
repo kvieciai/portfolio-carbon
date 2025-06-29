@@ -18,10 +18,10 @@ module.exports = (config) => {
         // Output directory
         outputDir: './dist/images',
 
-		// output image widths
+		// Output image widths
 		widths: [640, 1280, 3200, 4000],
 
-		// optional, attributes assigned on <img> nodes override these values
+		// Optional, attributes assigned on <img> nodes override these values
 		htmlOptions: {
 			imgAttributes: {
 				loading: "lazy",

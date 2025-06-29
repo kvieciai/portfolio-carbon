@@ -35,7 +35,7 @@
             <ul class="work__grid overflow">
                 {% for image in item.data.gallery %}
                 <li>
-                    <img src="{{ image.image }}" alt="{{ image.imageAlt }}" loading="lazy"/>
+                    <img src="{{ image.image }}" alt="{{ image.imageAlt }}" loading="lazy" sizes="125vw"/>
                 </li>
                 {% endfor %}
             </ul>

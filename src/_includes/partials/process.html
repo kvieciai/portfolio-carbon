@@ -7,7 +7,7 @@
 		{% for item in process.items | reverse %}
              <li>
 				<figure class="process__item">
-                	<img src="{{ item.image }}" alt="{{ item.imageAlt }}" loading="lazy"/>
+                	<img src="{{ item.image }}" alt="{{ item.imageAlt }}" loading="lazy" sizes="(max-width: 768px) 100vw, 33vw"/>
 					<figcaption>
 						<ul>
 							<li>{{ item.caption }}</li>
