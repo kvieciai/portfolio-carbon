@@ -4,8 +4,8 @@
   "main": ".eleventy.js",
   "scripts": {
     "start": "npx eleventy --serve",
-    "build": "npx eleventy",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "build": "npm run clean && npx eleventy"
   },
   "keywords": [],
   "author": "",

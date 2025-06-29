@@ -5,8 +5,10 @@ socialImage: '/images/social/reel-anciutin-2025-summer.png'
 layout: 'layouts/home.html'
 introduction:
   title: 'I’m Aleksandr Anciutin, an independent product designer based in Gothenburg, Sweden.'
-  image: '/images/introduction/reel-anciutin-2025-summer.png'
-  imageAlt: 'A screenshot of a dashboard'
+  videoVertical: '/images/introduction/reel-anciutin-2025-summer-vertical.webm'
+  videoHorizontal: '/images/introduction/reel-anciutin-2025-summer-horizontal.webm'
+  videoVerticalFallback: '/images/introduction/reel-anciutin-2025-summer-vertical.mp4'
+  videoHorizontalFallback: '/images/introduction/reel-anciutin-2025-summer-horizontal.mp4'
   tagline: "I'm a product designer who balances strategy with thoughtful detail, fostering transparency and collaboration to create meaningful connections between people and products."
 work:
   title: 'Selected work'

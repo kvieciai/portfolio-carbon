@@ -8,6 +8,12 @@
     border-top: 1px solid var(--color-border);
 }
 
+.status__container img {
+  height: clamp(37.5rem, 45.3125rem + -7.8125vw, 43.75rem);  /* height of the reel */
+  width: 100%;
+  object-fit: cover;
+}
+
 .status h2 {
   position: absolute;
   top: 50%;       

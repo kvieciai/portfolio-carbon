@@ -64,10 +64,11 @@ ul {
     max-width: 100%
 }
 
-img {
+:is(img, video) {
     width: 100%;
     border-radius: var(--border-radius);
 }
+
 
 figure {
   margin-block-start: inherit;

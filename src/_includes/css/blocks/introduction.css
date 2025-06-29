@@ -7,6 +7,13 @@
     margin-block-end: 1rem;
 }
 
+.introduction video {
+    height: clamp(37.5rem, 31.7308rem + 28.8462vw, 75rem);  /* height of the reel */
+    width: 100%;
+    object-fit: cover;
+}
+
+
 /* Defining a Grid */
 
 .introduction__grid {
