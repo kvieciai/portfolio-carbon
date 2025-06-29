@@ -3,13 +3,14 @@
 /* Global */
 --color-neutral-900: #262626;
 --color-neutral-400: #767676;
+--color-neutral-300: #919191;
 --color-neutral-200: #B9B9B9;
 --color-white: #ffffff;
 
 /* Color */
 --color-bg: var(--color-white);
 --color-text: var(--color-neutral-900);
---color-text-subdued: var(--color-neutral-200);
+--color-text-subdued: var(--color-neutral-300);
 --color-border: var(--color-neutral-200);
 
 /* Font */
