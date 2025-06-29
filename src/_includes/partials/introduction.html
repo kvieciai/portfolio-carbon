@@ -1,25 +1,10 @@
 <article class="introduction">
     <div class="wrapper">
         <h1>{{ introduction.title }}</h1>
-        <video autoplay crossorigin muted playsinline loop>
+        <video autoplay crossorigin poster muted playsinline loop>
             <source
-                src="{{ introduction.videoVertical }}"
-                type="video/webm; codecs=av01"
-                media="(max-width: 600px)"
-            />
-            <source
-                src="{{ introduction.videoHorizontal }}"
-                type="video/webm; codecs=av01"
-            />
-            <source
-                src="{{ introduction.videoVerticalFallback }}"
-                type="video/mp4"
-                media="(max-width: 769px)"
-            />
-            <source
-                src="{{ introduction.videoHorizontalFallback }}"
-                type="video/mp4"
-            />
+                src="{{ introduction.video }}"
+                type="video/mp4">
         </video>
         <div class="introduction__grid" data-layout="thirds">
             <p class="introduction__tagline">{{ introduction.tagline }}</p>
