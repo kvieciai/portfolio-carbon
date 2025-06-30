@@ -9,8 +9,7 @@
     {
       "caption": "Research on CAD model representation",
       "date": "October 2021",
-      "image": "/images/process/process-2.png",
-      "imageAlt": "Rendered wireframe CAD model of a mechanical part with detailed orange mesh lines and curves."
+      "video": "/images/process/process-2.mp4"
     },
     {
       "caption": "Workshop for evaluating concepts",
@@ -33,20 +32,18 @@
     {
       "caption": "Prototype of a second screen experience",
       "date": "March 2023",
-      "image": "/images/process/process-6.png",
-      "imageAlt": "Hand holding a smartphone showing a Volvo Sales app, mirrored on a large screen via AirPlay."
-    },
-    {
-      "caption": "Assets for a design system deck",
-      "date": "July 2023",
-      "image": "/images/process/process-7.png",
-      "imageAlt": "Illustration of overlapping design system tokens, labeled with spacing and scale values in colorful tags."
+      "video": "/images/process/process-6.mp4"
     },
     {
       "caption": "Workshop for mapping user flows",
       "date": "August 2024",
-      "image": "/images/process/process-8.png",
+      "image": "/images/process/process-7.png",
       "imageAlt": "A man writes on a whiteboard during a co-creation workshop, surrounded by sticky notes and sketches."
+    },
+    {
+      "caption": "Assets for a design system deck",
+      "date": "July 2024",
+      "video": "/images/process/process-8.mp4"
     }
   ]
 }

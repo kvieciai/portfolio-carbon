@@ -7,7 +7,15 @@
 		{% for item in process.items | reverse %}
              <li>
 				<figure class="process__item">
-                	<img src="{{ item.image }}" alt="{{ item.imageAlt }}" loading="lazy" sizes="(max-width: 768px) 100vw, 33vw"/>
+					{% if item.image %}
+						<img src="{{ item.image }}" alt="{{ item.imageAlt }}" loading="lazy" sizes="(max-width: 768px) 100vw, 33vw"/>
+					{% else %}
+						<video autoplay crossorigin muted playsinline loop>
+							<source
+								src="{{ item.video }}"
+								type="video/mp4">
+						</video>
+					{% endif %}
 					<figcaption>
 						<ul>
 							<li>{{ item.caption }}</li>
