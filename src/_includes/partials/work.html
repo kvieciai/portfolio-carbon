@@ -1,48 +1,52 @@
-<article class="work region">
+<div class="work">
 	<div class="wrapper">
         <h3 class="work__heading">{{ work.title }}</h3>
-        <hr>
-		<div class="work__body">
-            {% for item in collections.work %}
-                <div class="work__impact">
-                    <h2>{{ item.data.title }}</h2>
-                    <p>{{ item.data.company }}</p>
-                </div>
-                <div class="work__details">
-                    <p>{{ item.data.problem }}</p>
-                    <div>
-                        <h3>{{ work.capabilities.title }}</h3>
-                        <ul>
-                            <!-- {# Show capability names by using indexes from frontmatter (e.g. [2, 4, 5]) to look them up in the global capabilities list (from _data/capabilities.json).#} -->
-                            {% for index in item.data.capabilities %}
-                                {% if capabilities[index] %}
-                                    <li>{{ capabilities[index] }}</li>
-                                {% endif %}
-                            {% endfor %}
-                        </ul>
+
+        {% for item in collections.work %}
+        <article class="work__unit">
+            <div class="work__body">
+
+                    <div class="work__impact">
+                        <h2>{{ item.data.title }}</h2>
+                        <p>{{ item.data.company }}</p>
                     </div>
-                    <div>
-                        <h3>{{ work.industry.title }}</h3>
-                        <p>{{ item.data.industry }}</p>
+                    <div class="work__details">
+                        <p>{{ item.data.problem }}</p>
+                        <div>
+                            <h3>{{ work.capabilities.title }}</h3>
+                            <ul>
+                                <!-- {# Show capability names by using indexes from frontmatter (e.g. [2, 4, 5]) to look them up in the global capabilities list (from _data/capabilities.json).#} -->
+                                {% for index in item.data.capabilities %}
+                                    {% if capabilities[index] %}
+                                        <li>{{ capabilities[index] }}</li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>{{ work.industry.title }}</h3>
+                            <p>{{ item.data.industry }}</p>
+                        </div>
+                        <div>
+                            <h3>{{ work.year.title }}</h3>
+                            <p>{{ item.data.year }}</p>
+                        </div>
                     </div>
-                    <div>
-                        <h3>{{ work.year.title }}</h3>
-                        <p>{{ item.data.year }}</p>
-                    </div>
-                </div>
-        </div>
-        <div class="breakout">
-            <ul class="work__grid overflow">
-                {% for image in item.data.gallery %}
-                <li>
-                    <img src="{{ image.image }}" alt="{{ image.imageAlt }}" loading="lazy" sizes="125vw"/>
-                </li>
-                {% endfor %}
-            </ul>
-        </div>
-        <div class="work__note">
-            <p>{{ item.data.note }}</p>
-        </div>
-    {% endfor %}
+            </div>
+            <div class="breakout">
+                <ul class="work__grid overflow">
+                    {% for image in item.data.gallery %}
+                    <li>
+                        <img src="{{ image.image }}" alt="{{ image.imageAlt }}" loading="lazy" sizes="125vw"/>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="work__note">
+                <p>{{ item.data.note }}</p>
+            </div>
+        </article>
+        {% endfor %}
+
     </div>
-</article>
+</div>
