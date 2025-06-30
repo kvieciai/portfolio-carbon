@@ -1,4 +1,6 @@
 # portfolio-carbon
-This is my static site and portfolio. Built with Eleventy.
+This is a very simple static site and portfolio. Built with [Eleventy](https://www.11ty.dev/).
 
-I use this space to experiment with web performance, accessibility, semantic HTML and modern CSS. It's not perfect, and some parts are rough, but I'm always tinkering. And there's thought behind everything, and joy. Joy in making, instead of prompting.
+I use this website to experiment with web performance, accessibility, semantic HTML and modern CSS.
+
+It's not perfect, and some parts are rough, but I'm always learning. And there's thought behind everything, and joy. Joy in making, instead of prompting.
