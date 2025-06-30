@@ -92,7 +92,8 @@ margin: 0;
   scroll-padding-left: 1px;
 }
 
-.work__grid img {
+.work__grid img,
+.work__grid video {
   height: clamp(37.5rem, 31.7308rem + 28.8462vw, 75rem); /* height of the scrollable grid */
   width: auto;
   object-fit: contain;

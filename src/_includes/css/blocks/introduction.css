@@ -1,5 +1,6 @@
 .introduction {
     padding-block-start: clamp(15rem, -42.2206rem + 117.6471vw, 35rem);
+    margin-block-end: var(--region-space);
 }
 
 .introduction h1 {

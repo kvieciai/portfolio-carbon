@@ -8,8 +8,7 @@ capabilities: [0, 2, 3, 4]
 industry: 'Fintech'
 year: '2022'
 gallery:
-  - image: '/images/work/accuracy-1.png'
-    imageAlt: 'Browser interface for Tink Risk Decisioning, showing navigation and a real-time risk data overview.'
+  - video: '/images/work/accuracy-1.mp4'
   - image: '/images/work/accuracy-2.png'
     imageAlt: 'Risk report overview with annotated fields for personal, account, and financial data.'
   - image: '/images/work/accuracy-3.png'

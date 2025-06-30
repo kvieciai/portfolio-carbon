@@ -1,6 +1,6 @@
 ---
 permalink: false
-displayOrder: 1
+displayOrder: 
 title: 'Accelerated product development by building a design system for Volvo Cars'
 company: 'Volvo Cars is a Swedish automotive brand founded in 1927, known for pioneering safety innovations and designing premium vehicles with a focus on sustainability, technology, and safety.'
 problem: 'At Volvo, we iterated relentlessly. That often meant recreating the same components and pages in an endless loop. I led a small team focused on building foundations — the most essential, reusable components and design tokens that evolved as new patterns emerged.'
@@ -8,8 +8,7 @@ capabilities: [1, 5]
 industry: 'Automotive'
 year: '2024'
 gallery:
-  - image: '/images/work/accelerated-1.png'
-    imageAlt: 'A group of components, such as cards, list items, tabbars, and navbars.'
+  - video: '/images/work/accelerated-1.mp4'
   - image: '/images/work/accelerated-2.png'
     imageAlt: 'Annotated breakdown of a design mockup by segmented controls, list headers, icon buttons, and tab bar components.'
   - image: '/images/work/accelerated-3.png'

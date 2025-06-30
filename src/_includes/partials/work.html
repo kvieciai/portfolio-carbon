@@ -35,9 +35,18 @@
             </div>
             <div class="breakout">
                 <ul class="work__grid overflow">
-                    {% for image in item.data.gallery %}
+                    {% for item in item.data.gallery %}
                     <li>
-                        <img src="{{ image.image }}" alt="{{ image.imageAlt }}" loading="lazy" sizes="125vw"/>
+                        {% if item.image %}
+                            <img src="{{ item.image }}" alt="{{ item.imageAlt }}" loading="lazy" sizes="125vw"/>
+                            </video>
+                        {% else %}
+                            <video autoplay crossorigin muted playsinline loop>
+                                <source
+                                    src="{{ item.video }}"
+                                    type="video/mp4">
+                            </video>
+                        {% endif %}
                     </li>
                     {% endfor %}
                 </ul>
