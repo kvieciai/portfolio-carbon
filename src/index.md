@@ -1,7 +1,7 @@
 ---
 title: 'Aleksandr Anciutin'
 metaDesc: "Independent product designer who balances strategy with thoughtful detail"
-socialImage: '/images/social/reel-anciutin-2025-summer.png'
+socialImage: '/images/social/social-anciutin-2025.png'
 layout: 'layouts/home.html'
 introduction:
   title: 'I’m Aleksandr Anciutin, an independent product designer based in Gothenburg, Sweden.'

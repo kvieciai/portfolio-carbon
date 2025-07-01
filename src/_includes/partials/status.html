@@ -2,7 +2,11 @@
     <div class="wrapper">
         <div class="status__container">
             <h2>{{ status.availability }}</h2>
-            <img src="{{ status.image }}" alt="{{ status.imageAlt }}" loading="lazy"/>
+            <video autoplay crossorigin poster muted playsinline loop>
+                <source
+                    src="{{ status.video }}"
+                    type="video/mp4">
+            </video>
         </div>
     </div>
 </article>
