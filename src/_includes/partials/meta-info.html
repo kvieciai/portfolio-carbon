@@ -8,6 +8,10 @@
 {% set siteTitle = site.name %}
 {% set currentUrl = site.url + page.url %}
 
+{% if not socialImage %} 
+  {% set socialImage = site.url + '/images/social/social-anciutin-2025.png' %} 
+{% endif %}
+
 {# If the page’s Front Matter has specific metaTitle and/or metaDesc items, switch 
   them into the mix. #}
 {% if metaTitle %}
@@ -40,3 +44,7 @@
   <meta name="twitter:description" content="{{ metaDesc }}" />
   <meta property="og:description" content="{{ metaDesc }}" />
 {% endif %}
+
+<link rel="icon" type="image/png" href="/images/social/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/images/social/favicon.svg" />
+<link rel="shortcut icon" href="/images/social/favicon.ico" />
