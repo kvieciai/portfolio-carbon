@@ -1,9 +1,17 @@
 .introduction {
-    padding-block-start: clamp(15rem, -42.2206rem + 117.6471vw, 35rem);
+
     margin-block-end: var(--region-space);
 }
 
+.logo {
+    display: block;
+    height: auto;
+    width: clamp(8.75rem, 8.1731rem + 2.8846vw, 12.5rem);
+    margin-block-start: 1rem;
+}
+
 .introduction h1 {
+    padding-block-start: clamp(15rem, -42.2206rem + 117.6471vw, 35rem);
     max-width: clamp(50%, 125% - 30vw, 95%);
     margin-block-end: 1rem;
 }
