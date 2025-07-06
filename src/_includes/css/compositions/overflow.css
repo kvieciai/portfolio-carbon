@@ -3,3 +3,24 @@
     padding-block-end: 1rem;
     -webkit-overflow-scrolling: touch;
 }
+
+
+/* Always visible scrollbar */
+
+.overflow::-webkit-scrollbar {
+    -webkit-appearance: none;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.overflow::-webkit-scrollbar:vertical {
+    width: 8px;
+}
+
+.overflow::-webkit-scrollbar:horizontal {
+    height: 8px;
+}
+
+.overflow::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
