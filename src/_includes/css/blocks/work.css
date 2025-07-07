@@ -6,9 +6,16 @@ margin: 0;
 }
 
 .work__heading {
-  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* change units to variable later */
   margin-block-end: 16px; /* change units to variable later */
 }
+
+.work__heading h3 {
+  color: var(--color-text);
+}
+
 
 @media (min-width: 1600px) {
   .work__impact p {
@@ -16,7 +23,7 @@ margin: 0;
   }
 }
 
-.work__unit {
+.work__article {
   border-block-start: 1px solid var(--color-border); /*change to a variable later*/
   padding-block-start: 16px;
   margin-block-end: var(--region-space);
