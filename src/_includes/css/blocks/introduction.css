@@ -3,18 +3,31 @@
     margin-block-end: var(--region-space);
 }
 
-.logo {
-    display: block;
-    height: auto;
-    width: clamp(5rem, 4.6154rem + 1.9231vw, 7.5rem);
-    margin-block-start: 1rem;
+
+
+.introduction__heading {
+    margin-block-end: 1rem;
+    padding-block-start: clamp(7.5rem, 5.5769rem + 9.6154vw, 20rem);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
 }
 
-.introduction h1 {
+@media (min-width: 1900px) {
+    .introduction__heading {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* .introduction h1 {
     padding-block-start: clamp(15rem, -42.2206rem + 117.6471vw, 35rem);
     max-width: clamp(50%, 125% - 30vw, 95%);
     margin-block-end: 1rem;
-}
+} */
+
+
+
 
 .introduction video {
     height: clamp(37.5rem, 31.7308rem + 28.8462vw, 75rem);  /* height of the reel */

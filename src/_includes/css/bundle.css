@@ -25,4 +25,5 @@
 {% include "css/blocks/status.css" %}
 {% include "css/blocks/about.css" %}
 {% include "css/blocks/footer.css" %}
+{% include "css/blocks/header.css" %}
 

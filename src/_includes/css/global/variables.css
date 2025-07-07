@@ -21,7 +21,7 @@
 --font-weight-medium: 500;
 --font-size-200: 1rem;
 --font-size-700: clamp(2rem, -0.3333rem + 2.6667vw, 3rem);
---font-size-800: clamp(2.375rem, 0.9273rem + 4.7273vw, 4rem);
+--font-size-800: clamp(2.375rem, 0.9273rem + 4.7273vw, 3.5rem);
 
 --border-radius: 1rem;
 
