@@ -38,6 +38,8 @@ ol[role='list'] {
 body {
   min-height: 100vh;
   line-height: 1.5;
+/* Improve text rendering on MacOS */
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Set shorter line heights on headings and interactive elements */
