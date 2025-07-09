@@ -17,15 +17,6 @@
 }
 
 
-/* .introduction h1 {
-    padding-block-start: clamp(15rem, -42.2206rem + 117.6471vw, 35rem);
-    max-width: clamp(50%, 125% - 30vw, 95%);
-    margin-block-end: 1rem;
-} */
-
-
-
-
 .introduction video {
     height: clamp(37.5rem, 31.7308rem + 28.8462vw, 75rem);  /* height of the reel */
     width: 100%;
@@ -44,6 +35,7 @@
 .introduction__tagline,
 .introduction__capabilities {
     grid-column: 1;
+    margin-block-start: 1rem;
 }
 
 @media (min-width: 769px) {
