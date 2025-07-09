@@ -1,5 +1,5 @@
 <div class="work">
-	<div class="wrapper">
+    <div class="wrapper">
         <div class="work__heading">
             <svg class="icon" width="19" height="19" fill="none" viewBox="0 0 22 22">
             <path fill="#141414" d="M10.904 2.357c.229 0 .416.074.563.22.146.14.22.325.22.554v11.575l-.088 2.62-.501-.177 3.155-3.454 2.004-1.968a.682.682 0 0 1 .246-.159.917.917 0 0 1 .308-.052c.216 0 .395.073.536.22a.74.74 0 0 1 .22.544c0 .211-.08.402-.238.572l-5.836 5.844a.778.778 0 0 1-.272.194.734.734 0 0 1-.624 0 .865.865 0 0 1-.282-.194l-5.827-5.844a.804.804 0 0 1-.246-.572c0-.216.07-.398.211-.545a.74.74 0 0 1 .545-.22c.106 0 .205.018.299.053.1.036.184.088.255.159l2.004 1.968 3.146 3.454-.492.176-.088-2.619V3.131c0-.229.073-.413.22-.554a.762.762 0 0 1 .562-.22Z"/>
@@ -44,10 +44,8 @@
                             <img src="{{ item.image }}" alt="{{ item.imageAlt }}" loading="lazy" sizes="125vw"/>
                             </video>
                         {% else %}
-                            <video autoplay crossorigin muted playsinline loop>
-                                <source
-                                    src="{{ item.video }}"
-                                    type="video/mp4">
+                            <video class="lazy" autoplay crossorigin poster muted playsinline loop>
+                                <source data-src="{{ item.video }}" type="video/mp4">
                             </video>
                         {% endif %}
                     </li>

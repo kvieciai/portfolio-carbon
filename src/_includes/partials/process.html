@@ -1,19 +1,17 @@
 <div class="process__container">
-    <div class="process__body">
+	<div class="process__body">
 		<h3>Process</h3>
 		<p>Snapshots from the creative journey.</p>
 	</div>
 	<ul class="process__grid">
 		{% for item in process.items | reverse %}
-             <li>
+			 <li>
 				<figure class="process__item">
 					{% if item.image %}
 						<img src="{{ item.image }}" alt="{{ item.imageAlt }}" loading="lazy" sizes="(max-width: 768px) 100vw, 33vw"/>
 					{% else %}
-						<video autoplay crossorigin muted playsinline loop>
-							<source
-								src="{{ item.video }}"
-								type="video/mp4">
+						<video class="lazy" autoplay crossorigin poster muted playsinline loop>
+							<source data-src="{{ item.video }}" type="video/mp4">
 						</video>
 					{% endif %}
 					<figcaption>
@@ -23,7 +21,7 @@
 						</ul>
 					</figcaption>
 				</figure>
-            </li>
+			</li>
 		{% endfor %}
 	</ul>
  </div>
