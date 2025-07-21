@@ -19,5 +19,5 @@ gallery:
     imageAlt: 'Figma design file showing details page layouts for consolidated risk experience.'
   - image: '/images/work/accuracy-6.png'
     imageAlt: 'Figma parameter mapping diagram with entity relationships and JSON data examples.'
-note: "From day one, we brought our key customers (AMEX and Nordea) directly into our process. This proximity gave us a view into their workflows and allowed to build functionality that genuinely solved their problems. It sounds obvious, yet staying close to customers is surprisingly easy to forget."
+note: "From day one, we brought our key customers directly into our process. This proximity gave us a view into their workflows and allowed to build functionality that genuinely solved their problems. It sounds obvious, yet staying close to customers is surprisingly easy to forget."
 ---
