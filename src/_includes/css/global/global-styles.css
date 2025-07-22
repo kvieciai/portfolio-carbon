@@ -9,8 +9,8 @@ body {
   background: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-family);
-  font-size: 1rem; /* don't forget to fix this with variables */
-  line-height: 1.2;  /* don't forget to fix this with variables */
+  font-size: var(--font-size-200);
+  line-height: var(--leading);
   letter-spacing: var(--font-letter-spacing-normal);
   margin: 0;
 }
@@ -22,14 +22,14 @@ body {
 
 h1 {
   font-size: var(--font-size-800);
-  line-height: 1;  /* don't forget to fix this with variables */
+  line-height: var(--leading-flat);
   letter-spacing: var(--font-letter-spacing-tight);
   font-weight: var(--font-weight-medium);
 }
 
 h2 {
   font-size: var(--font-size-700);
-  line-height: 1;  /* don't forget to fix this with variables */
+  line-height: var(--leading-flat);
   letter-spacing: var(--font-letter-spacing-tight);
   font-weight: var(--font-weight-medium);
 
@@ -37,7 +37,7 @@ h2 {
 
 h3 {
   font-size: var(--font-size-200);
-  line-height: 1.2;  /* don't forget to fix this with variables */
+  line-height: var(--leading);
   letter-spacing: var(--font-letter-spacing-normal);
   font-weight: var(--font-weight-normal);
   color: var(--color-text-subdued);
