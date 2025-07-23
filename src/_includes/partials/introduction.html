@@ -8,13 +8,36 @@
                 src="{{ introduction.video }}"
                 type="video/mp4">
         </video>
-        <div class="introduction__grid" data-layout="thirds">
-            <p class="introduction__tagline">{{ introduction.tagline }}</p>
-            <ul class="introduction__capabilities">
-                {% for item in capabilities %}
-                    <li>{{ item }}</li>
-                {% endfor %}
-            </ul>
+        <div class="introduction__grid">
+            <div class="introduction__tagline">
+                <p>{{ introduction.tagline }}</p>
+            </div>
+            <div class="introduction__capabilities">
+                <h3>Capabilities</h3>
+                <ul>
+                    {% for item in capabilities %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="introduction__industries">
+                <h3>Industries</h3>
+                <ul>
+                    <li>Manufacturing</li>
+                    <li>Automotive</li>
+                    <li>Fintech</li>
+                </ul>
+            </div>
+            <div class="introduction__companies">
+                <h3>Organisations</h3>
+                <ul>
+                    <li>Independent</li>
+                    <li>BBH Stockholm</li>
+                    <li>Tink</li>
+                    <li>Sandvik</li>
+                    <li>Idea</li>
+                </ul>
+            </div>
         </div>
     </div>
 </article>
