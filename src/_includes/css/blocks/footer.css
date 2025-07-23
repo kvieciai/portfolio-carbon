@@ -1,16 +1,17 @@
 .footer {
-    margin-block-start: 4rem;
+    padding-block-end: var(--gutter);
 }
 
 .footer__information {
     border-top: 1px solid var(--color-border);
-    padding-block-start: 1rem;
+    padding-block-start: var(--space-flat-3xs);
+    padding-block-end: var(--space-xs);
 }
 
 .footer__information {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    gap: var(--gutter);
 }
 
 @media (max-width: 900px) {
@@ -23,9 +24,4 @@
     .footer__information {
         grid-template-columns: 1fr;
     }
-}
-
-.footer_note {
-    padding-block-start: 4rem;
-    padding-block-end: 1rem;
 }

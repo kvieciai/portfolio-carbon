@@ -1,5 +1,5 @@
 .header {
-    padding-block-start: 1.5rem;
+    padding-block-start: var(--gutter);
     position: relative;
     z-index: 1;
 }
@@ -7,7 +7,7 @@
 .header__container {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: var(--gutter);
 }
 
 .header__container > :nth-child(2) {

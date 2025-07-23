@@ -1,14 +1,12 @@
-/* Misc */
-.experience h3 {
-    margin-block-end: 0.5rem;
+.about {
+    padding-block-end: var(--space-xs);
 }
-
-.experience {
-    margin-block-start: 8rem;
+.experience h3 {
+    margin-block-end: 0.5rem; /* Adds spacing between the heading and the table */
 }
 
 .experience img {
-    height: auto;  /* height of the reel */
+    height: auto;
     width: 100%;
     object-fit: cover;
 }
@@ -16,11 +14,12 @@
 /* 4 column grid */
 
 .story {
-    border-top: 1px solid var(--color-border);
-    padding-block-start: 1rem;
+    border-top: 1px solid var(--color-border); /* change this to a variable later */
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: var(--gutter);
+    padding-block-start: var(--space-flat-3xs);
+    padding-block-end: var(--space-2xs-m);
 }
 
 @media (min-width: 800px) {
@@ -38,10 +37,9 @@
 /* 2 col grid */
 
 .experience {
-    padding-block-start: 1rem;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: var(--gutter);
 }
 
 @media (min-width: 800px) {

@@ -25,23 +25,41 @@
 --leading: 1.3;
 --leading-flat: 1;
 
-
 /* Borders */
 --border-radius: 1rem;
 
 /* Spacing */
 --wrapper-max-width: 2560px;
---gutter: clamp(1rem, -0.4118rem + 2.9412vw, 1.5rem);
---flow-space: 1rem;
---region-space: clamp(18.75rem, 1.1029rem + 36.7647vw, 25rem); /* fix this */
-
+--gutter: var(--space-3xs);
+--flow-space: 1rem; /* fix this */
+--region-space: var(--space-l);
 
 /* Fluid type scale */
---size--3: clamp(1rem, 1rem + 0vw, 1rem); /* 16 - 16 */
---size--2: clamp(1.25rem, 1.0962rem + 0.7692vw, 2.25rem); /* 20 - 36 */
---size--1: clamp(2rem, 1.8846rem + 0.5769vw, 2.75rem); /* 32 - 44 */
---size-0: clamp(2.5rem, 2.3462rem + 0.7692vw, 3.5rem); /* 40 - 56 */
---size-1: clamp(3rem, 2.8462rem + 0.7692vw, 4rem); /* 48 - 64 */
---size-2: clamp(3.5rem, 3.1923rem + 1.5385vw, 5.5rem); /* 56 - 88 */
---size-3: clamp(4rem, 3.5385rem + 2.3077vw, 7rem); /* 64 - 112 */
+--size--3: clamp(1rem, 1rem + 0vw, 1rem); /* 16 → 16 */
+--size--2: clamp(1.25rem, 1.0962rem + 0.7692vw, 2.25rem); /* 20 → 36 */
+--size--1: clamp(2rem, 1.8846rem + 0.5769vw, 2.75rem); /* 32 → 44 */
+--size-0: clamp(2.5rem, 2.3462rem + 0.7692vw, 3.5rem); /* 40 → 56 */
+--size-1: clamp(3rem, 2.8462rem + 0.7692vw, 4rem); /* 48 → 64 */
+--size-2: clamp(3.5rem, 3.1923rem + 1.5385vw, 5.5rem); /* 56 → 88 */
+--size-3: clamp(4rem, 3.5385rem + 2.3077vw, 7rem); /* 64 → 112 */
+
+/* Fluid space scale
+/* For mobile: 1.25 ratio starting from 24 */
+/* For desktop: 1.414 ratio starting from 24 */
+--space-flat-3xs: 1rem; /* 16 */
+--space-flat-2xs: 1.5rem; /* 24 */
+--space-3xs: clamp(1rem, 0.9231rem + 0.3846vw, 1.5rem); /* 16 → 24 */
+--space-2xs: clamp(1.5rem, 1.2692rem + 1.1538vw, 3rem); /* 24 → 48 */
+--space-xs: clamp(2.9375rem, 2.7356rem + 1.0096vw, 4.25rem); /* 47 → 68 */
+--space-s: clamp(3.6875rem, 3.3317rem + 1.7788vw, 6rem); /* 59 → 96 */
+--space-m: clamp(5.75rem, 5.3269rem + 2.1154vw, 8.5rem); /* 92 → 136 */
+--space-l: clamp(14rem, 12.4615rem + 7.6923vw, 24rem); /* 224 → 384 */
+--space-xl: clamp(27.3125rem, 26.3029rem + 5.0481vw, 33.875rem); /* 437 → 542 */
+--space-2xl: clamp(34.125rem, 28.9519rem + 25.8654vw, 67.75rem); /* 546 → 1084 */
+--space-3xl: clamp(34.125rem, 24.6346rem + 47.4519vw, 95.8125rem); /* 546 → 1533 */
+
+/* Custom space scale */
+--space-2xs-m: clamp(1.5rem, 0.4231rem + 5.3846vw, 8.5rem); /* 24 → 136 */
+--space-2xs-s: clamp(1.5rem, 0.8077rem + 3.4615vw, 6rem); /* 24 → 96 */
+
 }

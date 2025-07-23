@@ -1,13 +1,13 @@
-.introduction {
+/* .introduction {
     margin-block-end: var(--region-space);
-}
+} */
 
 .introduction__heading {
-    margin-block-end: 1rem;
-    padding-block-start: clamp(7.5rem, 5.5769rem + 9.6154vw, 20rem);
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: var(--gutter);
+
+    margin-block-end: var(--space-flat-3xs);
 }
 
 @media (min-width: 1900px) {
@@ -18,7 +18,7 @@
 
 
 .introduction video {
-    height: clamp(37.5rem, 31.7308rem + 28.8462vw, 75rem);  /* height of the reel */
+    height: var(--space-3xl);  /* height of the reel */
     width: 100%;
     object-fit: cover;
 }
@@ -29,13 +29,13 @@
 .introduction__grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 1rem;
+    grid-gap: var(--gutter);
 }
 
 .introduction__tagline,
 .introduction__capabilities {
     grid-column: 1;
-    margin-block-start: 1rem;
+    margin-block-start: var(--space-flat-3xs);
 }
 
 @media (min-width: 769px) {

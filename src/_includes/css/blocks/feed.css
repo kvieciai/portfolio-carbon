@@ -1,5 +1,5 @@
-
 .feed__introduction{
-    border-top: 1px solid var(--color-border);
-    padding-block-start: 1.5rem;
+    border-top: 1px solid var(--color-border); /* change to a variable later */
+    padding-block-start: var(--gutter);
+    padding-block-end: var(--region-space);
 }

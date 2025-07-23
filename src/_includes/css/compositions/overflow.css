@@ -1,12 +1,10 @@
 .overflow {
     overflow-x: auto;
-    padding-block-end: 1rem;
+    padding-block-end: var(--gutter);
     -webkit-overflow-scrolling: touch;
 }
 
-
 /* Always visible scrollbar */
-
 .overflow::-webkit-scrollbar {
     -webkit-appearance: none;
     background-color: rgba(0, 0, 0, 0.05);

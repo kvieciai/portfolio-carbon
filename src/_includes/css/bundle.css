@@ -6,15 +6,13 @@
 
 {# Component-agnostic layout system #}
 {% include "css/compositions/cluster.css" %}
-{% include "css/compositions/flow.css" %}
+{% include "css/compositions/region.css" %}
 {% include "css/compositions/repel.css" %}
-{% include "css/compositions/switcher.css" %}
-{% include "css/compositions/wrapper.css" %}
 {% include "css/compositions/breakout.css" %}
+{% include "css/compositions/wrapper.css" %}
 {% include "css/compositions/overflow.css" %}
 
 {# Helpers #}
-{% include "css/utilities/region.css" %}
 {% include "css/utilities/visually-hidden.css" %}
 
 {# Component and patters #}

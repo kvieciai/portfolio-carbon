@@ -5,11 +5,17 @@
 margin: 0;
 }
 
+.work__note p{
+  margin: 0;
+}
+
+/* Heading */
+
 .work__heading {
   display: flex;
   align-items: center;
-  gap: 0.5rem; /* change units to variable later */
-  margin-block-end: 16px; /* change units to variable later */
+  gap: 0.5rem; /* gap between icon and items */
+  padding-block-end: var(--space-flat-3xs);
 }
 
 .work__heading h3 {
@@ -24,8 +30,8 @@ margin: 0;
 }
 
 .work__article {
-  border-block-start: 1px solid var(--color-border); /*change to a variable later*/
-  padding-block-start: 16px;
+  border-block-start: 1px solid var(--color-border); /* change to a variable later*/
+  padding-block-start: var(--space-flat-3xs);
   margin-block-end: var(--region-space);
 }
 
@@ -34,9 +40,9 @@ margin: 0;
 
 .work__body {
   display: grid;
-  gap: 1rem;
+  gap: var(--gutter);
   align-items: start;
-  margin-block-end: 6rem;
+  margin-block-end: var(--space-2xs-s);
 }
 
 @media (min-width: 768px) {
@@ -49,7 +55,7 @@ margin: 0;
 
 .work__details {
   display: grid;
-  gap: 1.5rem;
+  gap: var(--gutter);
 }
 
 @media (min-width: 1040px) {
@@ -91,17 +97,17 @@ margin: 0;
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: max-content;
-  gap: 1rem;
-
+  gap: var(--gutter);
   align-items: stretch;
 
-  padding-inline: 0 2rem;
-  scroll-padding-left: 1px;
+  padding-inline: 0 var(--gutter); /* This means the scrollable grid will be flush on the left, but have spacing on the right */
+
+  overscroll-behavior-x: contain; /* Prevents navigation gestures when the user reaches the scroll boundary */
 }
 
 .work__grid img,
 .work__grid video {
-  height: clamp(37.5rem, 31.7308rem + 28.8462vw, 75rem); /* height of the scrollable grid */
+  height: var(--space-2xl); /* Defines height of the scrollable grid */
   width: auto;
   object-fit: contain;
 }
@@ -125,6 +131,3 @@ margin: 0;
     }
 }
 
-.work__note p{
-  margin: 0;
-}
