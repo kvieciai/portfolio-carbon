@@ -10,6 +10,8 @@ year: '2023'
 gallery:
   - image: '/images/work/fragmented-1.png'
     imageAlt: 'Mobile and smartwatch interfaces showing an app for Volvo Cars, with customer details, offers, and follow-up actions.'
+  - image: '/images/work/fragmented-2.png'
+    imageAlt: 'Sales agent standing at a high table using a laptop in a modern, open workspace with wooden stools and background decor.'
   - image: '/images/work/fragmented-3.png'
     imageAlt: 'Two mobile screens displaying a car sales app: one with a detailed car offer and configuration options, the other with a daily agenda of follow-ups and new sales cases.'
   - image: '/images/work/fragmented-4.png'
