@@ -19,34 +19,17 @@
 
 	{# Script for lazy loading videos #}
   <script>
-  // Lazy-load videos using IntersectionObserver
   document.addEventListener('DOMContentLoaded', () => {
-	// Select all videos with the .lazy class
-	const videos = document.querySelectorAll('.lazy');
-	// Only run if IntersectionObserver is supported
-	if ('IntersectionObserver' in window) {
-	  // Create an observer to watch for videos entering/leaving the viewport
-	  const observer = new IntersectionObserver((entries) => {
-		for (const entry of entries) {
-		  const video = entry.target;
-		  // If the video enters the viewport and hasn't been loaded yet
-		  if (entry.isIntersecting && !video.dataset.loaded) {
-			// Set the src attribute for all <source> elements from data-src (no check needed)
-			video.querySelectorAll('source').forEach(source => {
-			  source.src = source.dataset.src;
-			  source.removeAttribute('data-src');
-			});
-			// Start loading the video
-			video.load();
-			// Mark as loaded to avoid reloading
-			video.dataset.loaded = "true";
-			// No need to manually unobserve, handled by once: true
-		  }
-		}
-	  }, { rootMargin: '200px', threshold: 0.01, once: true });
-	  // Observe each video
-	  videos.forEach(video => observer.observe(video));
-	}
+    const observer = new IntersectionObserver((entries, obs) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        const video = entry.target;
+        video.querySelectorAll('source[data-src]').forEach(s => { s.src = s.dataset.src; });
+        video.load();
+        obs.unobserve(video);
+      }
+    }, { rootMargin: '200px' });
+    document.querySelectorAll('.lazy').forEach(v => observer.observe(v));
   });
   </script>
 
