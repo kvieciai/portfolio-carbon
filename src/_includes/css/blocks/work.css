@@ -103,6 +103,12 @@ margin: 0;
   padding-inline: 0 var(--gutter); /* This means the scrollable grid will be flush on the left, but have spacing on the right */
 
   overscroll-behavior-x: contain; /* Prevents navigation gestures when the user reaches the scroll boundary */
+
+  cursor: grab; /* Drag-to-scroll cursor styles */
+}
+
+.work__grid .is-grabbing {
+  cursor: grabbing; /* Drag-to-scroll cursor styles */
 }
 
 .work__grid img,
@@ -111,8 +117,6 @@ margin: 0;
   width: auto;
   object-fit: contain;
 }
-
-
 
 .work__note {
   display: grid;
@@ -130,4 +134,3 @@ margin: 0;
         grid-template-columns: repeat(4, 1fr);
     }
 }
-

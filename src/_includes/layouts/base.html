@@ -18,7 +18,7 @@
 	<style>{{ css | cssmin | safe }}</style>
 
 	{# Script for lazy loading videos #}
-<script>
+  <script>
   // Lazy-load videos using IntersectionObserver
   document.addEventListener('DOMContentLoaded', () => {
 	// Select all videos with the .lazy class
@@ -48,7 +48,74 @@
 	  videos.forEach(video => observer.observe(video));
 	}
   });
-</script>
+  </script>
+
+  {# Script for drag-to-scroll #}
+  <script>
+  (function() {
+    if (!window.PointerEvent) return;
+
+    var C = { threshold: 5, samples: 5, minVelocity: 0.3, multiplier: 13, friction: 0.95, stop: 0.3 };
+
+    function DragScroll(el) {
+      var self = this, v = [], raf = null, dragging = false, moved = false, startX, scrollL, lastX, lastT;
+
+      el.style.touchAction = 'pan-y pinch-zoom';
+
+      el.addEventListener('pointerdown', function(e) {
+        if (e.pointerType === 'mouse' && e.button !== 0) return;
+        el.setPointerCapture(e.pointerId);
+        if (raf) cancelAnimationFrame(raf);
+        dragging = true; moved = false;
+        startX = lastX = e.clientX;
+        scrollL = el.scrollLeft;
+        lastT = performance.now();
+        v.length = 0;
+      });
+
+      el.addEventListener('pointermove', function(e) {
+        if (!dragging) return;
+        var dx = Math.abs(e.clientX - startX);
+        if (!moved && dx > C.threshold) { moved = true; el.classList.add('is-grabbing'); }
+        if (!moved) return;
+        e.preventDefault();
+        var now = performance.now(), dt = now - lastT;
+        if (dt > 0) { v.push((lastX - e.clientX) / dt); if (v.length > C.samples) v.shift(); }
+        lastX = e.clientX; lastT = now;
+        el.scrollLeft = scrollL + (startX - e.clientX);
+      });
+
+      function end(e) {
+        if (!dragging) return;
+        el.releasePointerCapture(e.pointerId);
+        dragging = false;
+        el.classList.remove('is-grabbing');
+        if (moved && v.length) {
+          var avg = v.reduce(function(a, b) { return a + b; }, 0) / v.length;
+          if (Math.abs(avg) > C.minVelocity) momentum(avg);
+        }
+      }
+
+      function momentum(vel) {
+        var current = vel * C.multiplier;
+        (function animate() {
+          el.scrollLeft += current;
+          current *= C.friction;
+          if (Math.abs(current) > C.stop) raf = requestAnimationFrame(animate);
+        })();
+      }
+
+      el.addEventListener('pointerup', end);
+      el.addEventListener('pointerleave', end);
+      el.addEventListener('dragstart', function(e) { e.preventDefault(); });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var els = document.querySelectorAll('.work__grid.overflow');
+      for (var i = 0; i < els.length; i++) new DragScroll(els[i]);
+    });
+  })();
+  </script>
 </head>
 	<body>
 		{% include "partials/header.html" %}
