@@ -107,7 +107,9 @@ margin: 0;
   cursor: grab; /* Drag-to-scroll cursor styles */
 }
 
-.work__grid .is-grabbing {
+.work__grid.is-grabbing,
+.work__grid.is-grabbing img,
+.work__grid.is-grabbing video {
   cursor: grabbing; /* Drag-to-scroll cursor styles */
 }
 
@@ -116,6 +118,7 @@ margin: 0;
   height: var(--space-2xl); /* Defines height of the scrollable grid */
   width: auto;
   object-fit: contain;
+  cursor: grab; /* Drag-to-scroll cursor styles */
 }
 
 .work__note {
