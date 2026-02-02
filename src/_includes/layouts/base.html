@@ -53,72 +53,49 @@
   {# Script for drag-to-scroll #}
   <script>
   (() => {
-    // Graceful degradation: if PointerEvent not supported, native scroll still works via CSS overflow
-    if (!window.PointerEvent) return;
-
-    const C = { threshold: 5, samples: 5, minVelocity: 0.3, multiplier: 13, friction: 0.95, stop: 0.3 };
-
-    const initDragScroll = (el) => {
-      const v = [];
-      let raf = null, dragging = false, moved = false, startX, scrollL, lastX, lastT;
-
-      el.style.touchAction = 'pan-y pinch-zoom';
-
-      el.addEventListener('pointerdown', (e) => {
-        if (e.pointerType === 'mouse' && e.button !== 0) return;
-        el.setPointerCapture(e.pointerId);
-        if (raf) cancelAnimationFrame(raf);
-        dragging = true; moved = false;
-        startX = lastX = e.clientX;
-        scrollL = el.scrollLeft;
-        lastT = performance.now();
-        v.length = 0;
-        el.classList.add('is-grabbing');
-      });
-
-      el.addEventListener('pointermove', (e) => {
-        if (!dragging) return;
-        const dx = Math.abs(e.clientX - startX);
-        if (!moved && dx > C.threshold) moved = true;
-        if (!moved) return;
-        e.preventDefault();
-        const now = performance.now(), dt = now - lastT;
-        if (dt > 0) { v.push((lastX - e.clientX) / dt); if (v.length > C.samples) v.shift(); }
-        lastX = e.clientX; lastT = now;
-        el.scrollLeft = scrollL + (startX - e.clientX);
-      }, { passive: false });
-
-      const end = (e) => {
-        if (!dragging) return;
-        el.releasePointerCapture(e.pointerId);
-        dragging = false;
-        el.classList.remove('is-grabbing');
-        if (moved && v.length) {
-          let sum = 0;
-          for (let i = 0; i < v.length; i++) sum += v[i];
-          const avg = sum / v.length;
-          if (Math.abs(avg) > C.minVelocity) momentum(avg);
-        }
-      };
-
-      const momentum = (vel) => {
-        let current = vel * C.multiplier;
-        const animate = () => {
-          el.scrollLeft += current;
-          current *= C.friction;
-          if (Math.abs(current) > C.stop) raf = requestAnimationFrame(animate);
-        };
-        animate();
-      };
-
-      el.addEventListener('pointerup', end);
-      el.addEventListener('pointercancel', end);
-      el.addEventListener('pointerleave', end);
-      el.addEventListener('dragstart', (e) => e.preventDefault());
-    };
-
+    if (!window.PointerEvent) return; // Graceful degradation: native scroll works via CSS
+    const C = { threshold: 5, samples: 5, multiplier: 13, friction: 0.95, stop: 0.3 };
     document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.work__grid.overflow').forEach(initDragScroll);
+      document.querySelectorAll('.work__grid.overflow').forEach(el => {
+        const v = [];
+        let raf, dragging, moved, startX, scrollL, lastX, lastT;
+        el.style.touchAction = 'pan-y pinch-zoom';
+        el.addEventListener('pointerdown', e => {
+          if (e.pointerType === 'mouse' && e.button !== 0) return;
+          el.setPointerCapture(e.pointerId);
+          if (raf) cancelAnimationFrame(raf);
+          dragging = true; moved = false;
+          startX = lastX = e.clientX; scrollL = el.scrollLeft;
+          lastT = performance.now(); v.length = 0;
+          el.classList.add('is-grabbing');
+        });
+        el.addEventListener('pointermove', e => {
+          if (!dragging) return;
+          if (!moved && Math.abs(e.clientX - startX) > C.threshold) moved = true;
+          if (!moved) return;
+          e.preventDefault();
+          const now = performance.now(), dt = now - lastT;
+          if (dt > 0) { v.push((lastX - e.clientX) / dt); if (v.length > C.samples) v.shift(); }
+          lastX = e.clientX; lastT = now;
+          el.scrollLeft = scrollL + (startX - e.clientX);
+        }, { passive: false });
+        const end = e => {
+          if (!dragging) return;
+          el.releasePointerCapture(e.pointerId);
+          dragging = false;
+          el.classList.remove('is-grabbing');
+          if (moved && v.length) {
+            let sum = 0; for (let i = 0; i < v.length; i++) sum += v[i];
+            let cur = (sum / v.length) * C.multiplier;
+            if (Math.abs(cur) > C.stop) {
+              const anim = () => { el.scrollLeft += cur; cur *= C.friction; if (Math.abs(cur) > C.stop) raf = requestAnimationFrame(anim); };
+              anim();
+            }
+          }
+        };
+        ['pointerup', 'pointercancel', 'pointerleave'].forEach(evt => el.addEventListener(evt, end));
+        el.addEventListener('dragstart', e => e.preventDefault());
+      });
     });
   })();
   </script>
