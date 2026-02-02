@@ -71,6 +71,7 @@
       scrollL = el.scrollLeft;
       lastT = performance.now();
       v.length = 0;
+      el.classList.add('is-grabbing');
     });
 
     el.addEventListener('pointermove', function(e) {
