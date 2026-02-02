@@ -54,6 +54,7 @@
   <script>
   (() => {
     if (!window.PointerEvent) return; // Graceful degradation: native scroll works via CSS
+    if (!window.matchMedia('(any-pointer: fine)').matches) return; // Skip on touch-only devices
     const C = { threshold: 5, samples: 5, multiplier: 13, friction: 0.95, stop: 0.3 };
     document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.work__grid.overflow').forEach(el => {
